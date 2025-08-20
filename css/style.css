@@ -36,14 +36,14 @@ body{
 
 #logo img{
     float: left;
-    height: 100px;
+    height: 200px;
 }
 
 #menu{
     clear: both;
-    height: 55px;
-    background: #222;
+    background: #dd8f8f;
     color: white;
+    height: 60px;
     border-bottom: 4px solid #01b1ea;
 }
 
@@ -55,14 +55,14 @@ body{
 }
 
 #menu ul li{
-    float: left;
-    border-right: 1px solid #363636;
     line-height: 55px;
+    float: left;
+    border-right: 1px solid#363636;
 }
 
 #menu a{
     display: block;
-    color: white;
+    color: rgba(63, 6, 63, 0.534);
     text-decoration: none;
     padding-left: 12px;
     padding-right: 12px;
@@ -70,5 +70,44 @@ body{
 }
 
 #menu a:hover{
-    background-color: #01b1ea;
+    background-color: blue;
+    
+}
+
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+#lateral{
+    width: 20%;
+    min-height: 550px;
+    float: left;
+    border: 1px solid red;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid blue  ;
+}
+
+#lateral h3{
+    display: block;
+    color: #222;
+    width: center;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e1e1e1;
+    border: 2px solid #01e1EA;
 }
