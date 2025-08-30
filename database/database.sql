@@ -46,6 +46,7 @@ CREATE TABLE
     IF NOT EXISTS t_productos (
         id_producto INT (11) auto_increment NOT NULL,
         nombre_producto varchar(100) NOT NULL,
+        descripcion VARCHAR(200) NOT NULL,
         precio float (10, 2) NOT NULL,
         stock int (11) NOT NULL,
         oferta varchar(50) NOT NULL,
@@ -77,5 +78,5 @@ CREATE TABLE
         unidades INT (11) NOT NULL,
         CONSTRAINT pk_detalle_pedido PRIMARY KEY (id_detalle_pedido),
         CONSTRAINT fk_detalle_pedido FOREIGN KEY (id_pedido) REFERENCES t_pedidos (id_pedido),
-        CONSTRAINT fk_detallep_producto FOREIGN KEY (id_producto) REFERENCES t_productos (id_producto),
+        CONSTRAINT fk_detallep_producto FOREIGN KEY (id_producto) REFERENCES t_productos (id_producto)
     ) ENGINE = InnoDb;
