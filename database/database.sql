@@ -55,4 +55,16 @@ CREATE TABLE
         CONSTRAINT pk_producto PRIMARY KEY (id_producto),
         CONSTRAINT fk_producto_categoria FOREIGN KEY (id_categoria) REFERENCES t_categorias (id_categoria)
     ) ENGINE = InnoDb;
-    
+
+CREATE TABLE
+    IF NOT EXISTS t_pedidos (
+        id_pedido INT (11) auto_increment NOT NULL,
+        id_usuario INT (11) NOT NULL,
+        ciudad VARCHAR(50) NOT NULL,
+        direccion VARCHAR(50) NOT NULL,
+        fecha DATE NOT NULL,
+        costo FLOAT(10, 2) NOT NULL,
+        estado VARCHAR(50) NOT NULL,
+        CONSTRAINT pk_pedido PRIMARY KEY (id_pedido),
+        CONSTRAINT fk_pedido_usuario FOREIGN KEY (id_usuario) REFERENCES t_usuarios (id_usuario)
+    ) ENGINE = InnoDb;
