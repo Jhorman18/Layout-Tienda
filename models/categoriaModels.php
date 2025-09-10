@@ -1,10 +1,10 @@
 <?php
 
+require_once 'config/db.php';
 class Categoria
 {
     private $id;
     private $nombre;
-
     private $db;
 
     public function __construct()
@@ -12,19 +12,23 @@ class Categoria
         $this->db = Database::connect();
     }
 
-    function getId(){
+    function getId()
+    {
         return $this->id;
     }
 
-    function getNombre(){
+    function getNombre()
+    {
         return $this->nombre;
     }
 
-    function setId($id){
+    function setId($id)
+    {
         $this->id = $id;
     }
 
-    function setNombre($nombre){
-        $this->nombre = $nombre
+    function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
     }
 }
